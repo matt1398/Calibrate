@@ -27,6 +27,13 @@ from . import pythoncan
 
 import moteus.reader
 
+
+## Added function
+def torque2cur(t):
+    torque_constant = 0.1009
+    return t/torque_constant
+
+
 class FdcanusbFactory:
     PRIORITY = 10
 
@@ -974,6 +981,11 @@ class Controller:
 
     async def set_current(self, *args, **kwargs):
         return await self.execute(self.make_current(**kwargs))
+    
+
+    # Real torque mode
+    async def set_torque_made(self, command_torque, query):
+        return await self.set_current(d_A=0, q_A = torque2cur(command_torque), query=query)
 
     def make_stay_within(
             self,
