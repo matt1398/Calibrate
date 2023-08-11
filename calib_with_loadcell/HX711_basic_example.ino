@@ -1,3 +1,4 @@
+// You should upload this code to arduino uno board in order to calibrate the motor using loadcells
 
 #include <Arduino.h>
 #include "HX711.h"
