@@ -17,7 +17,10 @@ def estimate_inertia(csv_file):
     commanded_torque = df['commanded torque']
     torque = df['torque']
     position = df['position']
-    velocity = df['velocity']*(2*math.pi)
+    velocity = df['velocity']
+
+    # Since velocity data is noisy, the differentiated acceleration is also noisy, too.
+    # To prevent it, we first make velocity smoother to remove noises
     window_size = 15
     smoothed_velocity_data = np.convolve(velocity, np.ones(window_size)/window_size, mode='valid')
 
