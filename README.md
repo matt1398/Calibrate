@@ -15,7 +15,7 @@ Left value is Id, and right value is Iq. You should calculate proper amount of c
 
 3. if you want position control:
 `` d pos nan 0.2 0.3 s0.8 ``
-d pos <starting position> <velocity> <max torque> <ending position>
+`d pos <starting position> <velocity> <max torque> <ending position>`
 
 4. if you want velocity control:
 `` d pos nan 0.2 0.2 snan ``
