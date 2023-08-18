@@ -4,7 +4,7 @@ import moteus
 import math
 
 # Setting port for arduino joystick
-port = '/dev/cu.usbmodem1301'
+port = '/dev/cu.usbmodem11301'
 ser = serial.Serial(port, 9600, timeout=1)
 
 
@@ -25,7 +25,7 @@ async def read_serial():
 # main code that moves motor with given joystick movements
 async def main():
     qr = moteus.QueryResolution()
-    c = moteus.Controller(query_resolution=qr)
+    c = moteus.Controller(id = 1, query_resolution=qr)
     print(f"Controller ID: {c.id}") # Print the controller ID
     while True:
 
