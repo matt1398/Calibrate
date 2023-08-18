@@ -14,7 +14,7 @@ I recommend that the value after f is lower than 0.35(0.35 will be super-fast).
 Left value is Id, and right value is Iq. You should calculate proper amount of current to give certain torque.
 
 3. if you want position control:
-`` d pos nan 0.2 0.3 s0.8 ``
+`` d pos nan 0.2 0.3 s0.8 ``, which is particularly:
 `d pos <starting position> <velocity> <max torque> <ending position>`
 
 4. if you want velocity control:
