@@ -6,7 +6,7 @@ For controlling the motor using tview:
 command: `` python3 -m moteus_gui.tview ``
 
 1. if you want torque control: 
-`` d pos nan 0 nan p0 d0 f0.1``
+``` d pos nan 0 nan p0 d0 f0.1```
 I recommend that the value after f is lower than 0.35(0.35 will be super-fast).
 
 2. if you want current control:
