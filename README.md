@@ -1,5 +1,5 @@
 # Calibrate
-Repo for calibrating bldc motor
+Repo for calibrating + controlling bldc motor
 
 For controlling the motor using tview:
 
